@@ -73,8 +73,19 @@
     const index = comments.findIndex(comment => {
       return comment.id === 823423;
     })
-
     console.log({index});
+
+    // comments.splice(index, 1); // will splice comment out from index of 1
+    // console.table(comments); //console remaining comments 
+
+    const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ]; //creates new array from remaining comments
+    console.table(newComments); //this seems more complicated
+    
+
+
     
   </script>
 </body>
