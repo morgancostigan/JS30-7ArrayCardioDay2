@@ -79,7 +79,7 @@
     // console.table(comments); //console remaining comments 
 
     const newComments = [
-      ...comments.slice(0, index),
+      ...comments.slice(0, index), //spread into new array
       ...comments.slice(index + 1)
     ]; //creates new array from remaining comments
     console.table(newComments); //this seems more complicated
