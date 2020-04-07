@@ -26,12 +26,17 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    const isAdult = people.some(function(person) {
+    // const isAdult = people.some(function(person) {
+    //   const currentYear = (new Date()).getFullYear();
+    //   if (currentYear - person.year >= 19){
+    //     return true;
+    //   }
+    // }) //verbose
+
+    const isAdult = people.some(person => {
       const currentYear = (new Date()).getFullYear();
-      if (currentYear - person.year >= 19){
-        return true;
-      }
-    })
+      return currentYear - person.year >= 19;
+    }) //cleaner version
 
     console.log({isAdult}); //curly brackets will log the variable
     
